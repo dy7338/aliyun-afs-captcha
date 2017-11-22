@@ -9,8 +9,8 @@ namespace Aliyuncaptcha;
  * Time: 下午4:03
  */
 
-require_once __DIR__ . '../core/aliyun-php-sdk-core/Config.php';
-require_once __DIR__ . '../core/aliyun-php-sdk-jaq/Jaq/Request/V20161123/AfsCheckRequest.php';
+require_once __DIR__ . '/../core/aliyun-php-sdk-core/Config.php';
+require_once __DIR__ . '/../core/aliyun-php-sdk-jaq/Jaq/Request/V20161123/AfsCheckRequest.php';
 
 class Client {
     protected $iClientProfile;
@@ -18,8 +18,8 @@ class Client {
 
     public function __construct ($accessKeyId = null, $accessKeySecret = null) {
         // accessKeyId、accessKeySecret
-        $this->iClientProfile = DefaultProfile::getProfile ("cn-hangzhou", $accessKeyId, $accessKeySecret);
-        $this->client = new DefaultAcsClient($this->iClientProfile);
+        $this->iClientProfile = \DefaultProfile::getProfile ("cn-hangzhou", $accessKeyId, $accessKeySecret);
+        $this->client = new \DefaultAcsClient($this->iClientProfile);
     }
 
 
