@@ -49,7 +49,7 @@ class Client {
 
             return $response->getBody ();
         } catch (Exception $e) {
-            dump ($e);
+            return false;
         }
     }
 }
